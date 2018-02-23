@@ -13,3 +13,15 @@ Configuration :
 
 Run :
  Use 'tt.bat' or 'tt.sh' to launch telosys-cli
+ 
+ or completly run it from command line by using parameters:
+ e.g.:
+	-h .\..\model\ -ac on -m MyDatabase.dbrep -b MyDatabase -udbm * -gen +autoend 
+ 
+	-h 	: Set Home-Path (Absolute or Relative)
+	-ac : Set AutoConfirm to on|off 
+	-m : Set Model to use
+	-b : Set Bundle to use
+	-udbm : Update selected database model
+	-gen +autoend : Start generation with automatically ending if all ok.
+	
