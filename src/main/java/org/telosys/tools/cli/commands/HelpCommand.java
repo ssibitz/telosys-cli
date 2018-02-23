@@ -105,16 +105,31 @@ public class HelpCommand extends Command {
 	}
 	
 	private void printHelp(CommandsGroup commandsGroup) {
+		// Pre-Check if any command in group:
+		Boolean anyCommandInGroup = false;
+		for ( String commandName : commandsGroup.getCommands() ) {
+			Command c = commandProvider.getCommand(commandName);
+			if (c != null) {
+				anyCommandInGroup = true;
+				break;
+			}
+		}
+		if (!anyCommandInGroup)
+			return;;
 		print( commandsGroup.getName() + " :" );
+		print("------------------------------------------------------------");
 		for ( String commandName : commandsGroup.getCommands() ) {
 			Command c = commandProvider.getCommand(commandName);
 			if ( c != null ) {
 				print(formatCommand(c)) ;
 			}
+			/*
 			else {
 				print(". " + padding(commandName, PADDING) + " ( TODO ) not yet implemented") ;
 			}
+			*/
 		}
+		print(" ");
 	}
 
 	private String padding(String s, int length) {

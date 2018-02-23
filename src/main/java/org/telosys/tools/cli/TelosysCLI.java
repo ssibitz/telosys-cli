@@ -82,6 +82,7 @@ public class TelosysCLI {
 		print(Color.colorize(banner, Color.CYAN_BRIGHT));
 		// print few messages
 		print("Enter ? for help");
+		print("");
 		
 		DatabaseObserverProvider.setModelObserverClass(DbModelObserver.class);
 		DatabaseObserverProvider.setMetadataObserverClass(DbMetadataObserver.class);

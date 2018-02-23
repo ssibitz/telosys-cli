@@ -41,6 +41,8 @@ import jline.console.ConsoleReader;
  *
  */
 public class GenerateCommand extends CommandWithModel {
+
+	private Boolean hasErrors = false;
 	
 	/**
 	 * Constructor
@@ -48,6 +50,7 @@ public class GenerateCommand extends CommandWithModel {
 	 */
 	public GenerateCommand(ConsoleReader consoleReader, Environment environment) {
 		super(consoleReader, environment);
+		hasErrors = false;
 	}
 
 	@Override
@@ -72,6 +75,7 @@ public class GenerateCommand extends CommandWithModel {
 
 	@Override
 	public String execute(String[] args) {
+		hasErrors = true;
 		if ( checkModelDefined() && checkBundleDefined() ) {
 			// Check arguments :
 			// 1 : gen -r
@@ -83,6 +87,11 @@ public class GenerateCommand extends CommandWithModel {
 			}
 		}
 		return null ;
+	}
+
+	@Override
+	public Boolean hasCommandErrors() {
+		return hasErrors;
 	}
 
 	/**
@@ -161,7 +170,13 @@ public class GenerateCommand extends CommandWithModel {
 		else {
 			if ( confirm("Do you want to launch the generation") ) {
 				print("Generation in progress...");
-				return telosysProject.launchGeneration(model, entityNames, bundleName, targetDefinitions, flagResources);			
+				GenerationTaskResult res = telosysProject.launchGeneration(model, entityNames, bundleName, targetDefinitions, flagResources);
+				if (res.getNumberOfGenerationErrors()>0 || res.getErrors().size()>0) {
+					hasErrors = true;
+				} else {
+					hasErrors = false;
+				}
+				return res;
 			}
 			else {
 				print("Generation canceled.");

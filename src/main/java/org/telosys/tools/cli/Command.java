@@ -153,7 +153,15 @@ public abstract class Command {
 	protected boolean confirm(String message) {
 		out.print( message + " [y/n] ? " );
 		out.flush();
-		String r = readResponse() ;
+		// If autoconfirm enabled do not ask user:
+		String r;
+		if (getCurrentAutoConfirm()) {
+			r = "Y";
+			out.println("Automatically confirmed because autoconfirm is set to on");
+			out.flush();
+		} else {
+			r = readResponse() ;
+		}
 		return "Y".equalsIgnoreCase(r) ;
 	}
 
@@ -250,13 +258,29 @@ public abstract class Command {
 	}
 	
 	/**
+	 * Returns the current AutoConfirm
+	 * @return
+	 */
+	protected Boolean getCurrentAutoConfirm() {
+		return environment.getAutoconfirm();
+	}
+
+	/**
+	 * @param autoconfirm
+	 */
+	protected void setCurrentAutoConfirm(Boolean autoconfirm) {
+		environment.setAutoconfirm(autoconfirm);
+		updatePrompt();
+	}
+
+	/**
 	 * Returns the current home directory
 	 * @return
 	 */
 	protected String getCurrentHome() {
 		return environment.getHomeDirectory();
 	}
-	
+
 	//-------------------------------------------------------------------------
 	/**
 	 * Check the number of arguments
@@ -569,6 +593,13 @@ public abstract class Command {
 		else {
 			return "(undefined)";
 		}
-	}	
+	}
+
+	/**
+	 * Returns if the generation succesed without any errors
+	 */
+	public Boolean hasCommandErrors() {
+		return false;
+	}
 
 }   

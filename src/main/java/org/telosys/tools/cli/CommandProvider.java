@@ -20,44 +20,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import org.telosys.tools.cli.commands.BundleCommand;
-import org.telosys.tools.cli.commands.CdCommand;
-import org.telosys.tools.cli.commands.CheckDatabaseCommand;
-import org.telosys.tools.cli.commands.CheckModelCommand;
-import org.telosys.tools.cli.commands.DeleteBundleCommand;
-import org.telosys.tools.cli.commands.DeleteEntityCommand;
-import org.telosys.tools.cli.commands.DeleteModelCommand;
-import org.telosys.tools.cli.commands.EditBundleCommand;
-import org.telosys.tools.cli.commands.EditCommand;
-import org.telosys.tools.cli.commands.EditConfigCommand;
-import org.telosys.tools.cli.commands.EditDatabasesCommand;
-import org.telosys.tools.cli.commands.EditEntityCommand;
-import org.telosys.tools.cli.commands.EditModelCommand;
-import org.telosys.tools.cli.commands.EnvCommand;
-import org.telosys.tools.cli.commands.ErrorCommand;
-import org.telosys.tools.cli.commands.GenerateCommand;
-import org.telosys.tools.cli.commands.GitHubCommand;
-import org.telosys.tools.cli.commands.GuideCommand;
-import org.telosys.tools.cli.commands.HelpCommand;
-import org.telosys.tools.cli.commands.HomeCommand;
-import org.telosys.tools.cli.commands.InitCommand;
-import org.telosys.tools.cli.commands.InstallBundlesCommand;
-import org.telosys.tools.cli.commands.ListBundlesCommand;
-import org.telosys.tools.cli.commands.ListDatabasesCommand;
-import org.telosys.tools.cli.commands.ListEntitiesCommand;
-import org.telosys.tools.cli.commands.ListGitHubCommand;
-import org.telosys.tools.cli.commands.ListModelsCommand;
-import org.telosys.tools.cli.commands.ListResourcesCommand;
-import org.telosys.tools.cli.commands.ListTemplatesCommand;
-import org.telosys.tools.cli.commands.LsCommand;
-import org.telosys.tools.cli.commands.ModelCommand;
-import org.telosys.tools.cli.commands.NewDbModelCommand;
-import org.telosys.tools.cli.commands.NewEntityCommand;
-import org.telosys.tools.cli.commands.NewModelCommand;
-import org.telosys.tools.cli.commands.PwdCommand;
-import org.telosys.tools.cli.commands.QuitCommand;
-import org.telosys.tools.cli.commands.ThrowExceptionCommand;
-import org.telosys.tools.cli.commands.UpdateDbModelCommand;
+import org.telosys.tools.cli.commands.*;
 
 import jline.console.ConsoleReader;
 
@@ -93,6 +56,7 @@ public class CommandProvider {
 		
 		// Project commands
 		register(new HomeCommand(consoleReader, environment)); // h 
+		register(new AutoConfirmCommand(consoleReader, environment)); // ac
 		register(new InitCommand(consoleReader, environment)); // init
 		register(new EditConfigCommand(consoleReader, environment)); // ecfg
 		register(new EditDatabasesCommand(consoleReader, environment)); // edb

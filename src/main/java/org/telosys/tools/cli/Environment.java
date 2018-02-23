@@ -55,6 +55,7 @@ public class Environment {
 	private       String currentGitHubStore = DEFAULT_GITHUB_STORE ;
 	private       String currentModel ;
 	private       String currentBundle ;
+	private		  Boolean currentAutoConfirm;
 	
 	/**
 	 * Constructor
@@ -79,6 +80,7 @@ public class Environment {
 		this.currentModel       = null ;
 		this.currentBundle      = null ;
 		this.currentGitHubStore = DEFAULT_GITHUB_STORE ;
+		this.currentAutoConfirm = false;
 	}
 	
 	/**
@@ -312,6 +314,32 @@ public class Environment {
 		this.homeDirectory = directory;
 		// Reset the current environment according with the new HOME
 		resetCurrentEnvironment() ; 
+	}
+
+	//---------------------------------------------------------------------------------
+	// Current autoconfirm
+	//---------------------------------------------------------------------------------
+	/**
+	 * Returns the current "AUTOCONFIRM" or null if not defined
+	 * @return
+	 */
+	public Boolean getAutoconfirm() {
+		return currentAutoConfirm;
+	}
+
+	/**
+	 * Set the "AUTOCONFIRM"
+	 */
+	public void setAutoconfirm() {
+		setAutoconfirm(false);
+	}
+
+	/**
+	 * Set the "HOME" directory with the given directory
+	 * @param autoconfirm
+	 */
+	public void setAutoconfirm(Boolean autoconfirm) {
+		this.currentAutoConfirm = autoconfirm;
 	}
 
 	//---------------------------------------------------------------------------------
