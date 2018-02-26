@@ -7,4 +7,4 @@ title "Telosys Command Line Tools - Database Generator"
 
 REM Call update database model, generate all templates
 cd .\target\
-java -jar telosys-cli-3.0.0-011.jar -h .\..\model\
+java -jar telosys-cli-3.0.0-011.jar -h .\..\model\ -ac on -m %DB%.dbrep -b %DB% -udbm * -gen +autoend 

@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07e6a834-a37a-4063-83e2-2693ace4a2ec" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/Install2Maven.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/telosys-tools-all-3.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/commands/AutoConfirmCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telosys-cli.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tt.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/CommandProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/LaunchArgumentsProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/LaunchArgumentsProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/TelosysCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/TelosysCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/commands/GenerateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/commands/GenerateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/commands/HelpCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tt.EcoCalcDD_Dynamic.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tt.EcoCalcDD_Stationary.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tt.bat" beforeDir="false" afterPath="$PROJECT_DIR$/tt.bat" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,21 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommandProvider.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/CommandProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
-              <folding>
-                <element signature="e#5858#5859#0" expanded="true" />
-                <element signature="e#5897#5898#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -99,7 +75,12 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="telosys-cli" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -115,6 +96,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,7 +169,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,27 +245,27 @@
       <updated>1519309197150</updated>
       <workItem from="1519309200707" duration="6894000" />
       <workItem from="1519371197500" duration="9753000" />
+      <workItem from="1519636383939" duration="609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16647000" />
+    <option name="totallyTimeSpent" value="17256000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="882" extended-state="6" />
+    <frame x="-8" y="-8" width="1922" height="872" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.18215811" />
+      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.1820623" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3489011" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32967034" />
       <window_info id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24732906" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24973147" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="0" />
@@ -293,6 +274,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
       <window_info anchor="bottom" id="JProfiler" order="9" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -317,6 +299,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/CommandProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+          <folding>
+            <element signature="e#5858#5859#0" expanded="true" />
+            <element signature="e#5897#5898#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/LaunchArgumentsProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1768">
@@ -407,9 +400,6 @@
           <caret line="106" column="34" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="34" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/license/license-header.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/telosys/tools/cli/commands/BundleCommand.java">
       <provider selected="true" editor-type-id="text-editor">
