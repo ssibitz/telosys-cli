@@ -117,7 +117,14 @@ public class LaunchArgumentsProcessor {
 		if ( udbm != null) {
 			// Set current model
 			Command updateCommand = commandProvider.getCommand("udbm");
-			print(updateCommand.execute( buildArgs(updateCommand)));
+			print(updateCommand.execute( buildArgs(updateCommand, udbm)));
+		}
+		// Is there a "-ndbm" argument ?
+		String ndbm = getStringArg("-ndbm", args);
+		if ( ndbm != null) {
+			// Set current model
+			Command newCommand = commandProvider.getCommand("ndbm");
+			print(newCommand.execute( buildArgs(newCommand, ndbm)));
 		}
 		// Is there a "-gen *" argument ?
 		String gen = getStringArg("-gen", args);
